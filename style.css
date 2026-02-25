@@ -1,0 +1,143 @@
+:root {
+    --bg: #1E2329;
+    --bg-relief: #2A3038;
+    --neon-cyan: #00D2FF;
+    --neon-purple: #9D50BB;
+    --text-dim: #8B949E;
+    --text : #f0f2f5;
+}
+
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    background-color: var(--bg,--bg-relief);
+    color: var(--text);
+}
+
+header{
+    padding: 1.5em;
+    font-family: 'cubano';
+    margin: 0;
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+}
+
+header h1{
+    padding: 10px 24px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+header li{
+    padding: 15px 30px;
+    list-style: none;
+}
+
+.btn{
+    padding: 10px 24px;
+    border-radius: 50px;
+    border: 1px solid var(--neon-cyan);
+    background: transparent;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.btn:hover{
+    background: var(--neon-cyan);
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+}
+
+.ligne-sep{
+    width: 50%;
+    margin: 2em auto;
+    background-color: var(--text-dim);
+    height: 1px;
+}
+
+#titre-page{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'cubano';
+    text-align: center;
+    color: var(--text);
+}
+
+#contenu{
+    margin-top: 5em;
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
+}
+
+.div-contenu{
+    width: 30em;
+    height: 10em;
+    padding: 10px 24px;
+    border-radius: 50px;
+    border: 1px solid var(--neon-purple);
+    background: transparent;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+    font-family: 'cubano';
+    transition: 0.3s ease;
+}
+
+.div-contenu:hover{
+    transform: scale(1.05);
+    border: 1px solid var(--neon-cyan);
+}
+
+.div-contenu li{
+    font-family: 'robot';
+    padding: 0.25em;
+}
+
+.neon{
+    padding: 15em;
+}
+
+#neon-droite {
+    position: absolute;
+    bottom: 10%;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    background: var(--neon-purple);
+    filter: blur(150px);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+#neon-gauche {
+    position: absolute;
+    top: 20%;
+    left: -150px;
+    width: 400px;
+    height: 400px;
+    background: var(--neon-cyan);
+    filter: blur(150px);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+@font-face {
+    font-family: 'cubano';
+    src: url(fonts/Cubano.ttf);
+}
+@font-face {
+    font-family: 'robot';
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}

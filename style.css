@@ -5,138 +5,260 @@
     --neon-purple: #9D50BB;
     --text-dim: #8B949E;
     --text : #f0f2f5;
+    --scale-contenu-ratio: 1;
+    --scale-contenu-width: 30em;
+    --scale-contenu-height: 11em;
+    --scale-contenu-radius: 50px;
 }
 
-html{
-    max-width: 100%;
-    overflow-x: hidden;
+* {
+    box-sizing: border-box;
 }
 
-body{
+html, body {
     margin: 0;
-    background-color: var(--bg,--bg-relief);
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--bg);
     color: var(--text);
+    font-family: 'robot', sans-serif;
 }
 
-header{
+header {
     padding: 1.5em;
     font-family: 'cubano';
-    margin: 0;
     display: flex;
-    flex: auto;
     justify-content: space-between;
+    align-items: center;
 }
 
-header h1{
-    padding: 10px 24px;
-    text-decoration: none;
-    font-weight: 500;
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
 }
 
-header a{
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header a {
     text-decoration: none;
     color: var(--text);
 }
 
-header li{
-    padding: 15px 30px;
-    list-style: none;
-}
-
-.btn{
+.btn {
     padding: 10px 24px;
     border-radius: 50px;
     border: 1px solid var(--neon-cyan);
     background: transparent;
-    text-decoration: none;
-    font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--neon-cyan);
     color: black;
     box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
 }
 
-.ligne-sep{
+.ligne-sep {
     width: 50%;
     margin: 2em auto;
     background-color: var(--text-dim);
     height: 1px;
+    opacity: 0.2;
 }
 
-#titre-page{
+#titre-page {
     font-size: 2em;
     text-transform: uppercase;
     font-family: 'cubano';
     text-align: center;
-    color: var(--text);
+    margin: 2em 0;
 }
 
-#contenu{
-    margin-top: 5em;
+#contenu {
     display: flex;
-    flex: auto;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 2em;
 }
 
-.div-contenu{
-    width: 30em;
-    height: 10em;
-    padding: 10px 24px;
-    border-radius: 50px;
+.div-contenu {
+    width: var(--scale-contenu-width);
+    min-height: var(--scale-contenu-height);
+    padding: 25px;
+    border-radius: var(--scale-contenu-radius);
     border: 1px solid var(--neon-purple);
-    background: transparent;
-    font-weight: 500;
-    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+    background: rgba(255, 255, 255, 0.02);
     font-family: 'cubano';
-    transition: 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
 }
 
-.div-contenu:hover{
-    transform: scale(1.05);
-    border: 1px solid var(--neon-cyan);
+.div-contenu:hover {
+    transform: scale(1.05) translateY(-10px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
 }
 
-.div-contenu li{
+.div-contenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.div-contenu li {
     font-family: 'robot';
-    padding: 0.25em;
+    color: var(--text-dim);
+    padding: 5px 0;
 }
 
-.neon{
-    padding: 15em;
+#contenu:has(.div-contenu:hover) .div-contenu:not(:hover) {
+    filter: blur(2px);
+    opacity: 0.5;
 }
 
-#neon-droite {
+#frise {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 5em auto;
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#frise h1 {
+    font-family: 'cubano';
+    margin-bottom: 4em;
+    text-align: center;
+}
+
+#frise::before {
+    content: "";
     position: absolute;
-    bottom: 10%;
-    right: -150px;
-    width: 400px;
-    height: 400px;
-    background: var(--neon-purple);
+    top: 10em;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--neon-cyan), var(--neon-purple), transparent);
+    transform: translateX(-50%);
+}
+
+.etape-pipeline {
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cercle-pipeline {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 3px solid var(--neon-cyan);
+    box-shadow: 0 0 15px var(--neon-cyan);
+    z-index: 10;
+    flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.cercle-pipeline.purple {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 15px var(--neon-purple);
+    width: 30px;
+    height: 30px;
+}
+
+.cercle-pipeline.cyan-petit {
+    width: 15px;
+    height: 15px;
+}
+
+.cercle-pipeline.ts-futur {
+    border-color: var(--text-dim);
+    border-style: dashed;
+    box-shadow: 0 0 10px rgba(139, 148, 158, 0.5);
+}
+
+.cercle-pipeline:hover {
+    transform: scale(1.3);
+}
+
+.info-etape {
+    position: absolute;
+    width: 350px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+}
+
+.etape-pipeline:hover .info-etape {
+    transform: scale(1.1);
+}
+
+.info-etape h3 {
+    margin: 0;
+    font-family: 'cubano';
+    font-size: 1.1em;
+}
+
+.info-etape p {
+    margin: 5px 0;
+    font-family: 'robot';
+    color: var(--text-dim);
+}
+
+.etape-pipeline:nth-child(even) .info-etape {
+    right: calc(50% + 40px);
+    text-align: right;
+    transform-origin: right center;
+}
+
+.etape-pipeline:nth-child(odd) .info-etape {
+    left: calc(50% + 40px);
+    text-align: left;
+    transform-origin: left center;
+}
+
+.neon {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
     filter: blur(150px);
-    opacity: 0.15;
-    z-index: -1;
+    opacity: 0.1;
+    z-index: -2;
+    pointer-events: none;
 }
 
 #neon-gauche {
-    position: absolute;
-    top: 20%;
-    left: -150px;
-    width: 400px;
-    height: 400px;
+    top: 10%;
+    left: -200px;
     background: var(--neon-cyan);
-    filter: blur(150px);
-    opacity: 0.15;
-    z-index: -1;
+}
+
+#neon-droite {
+    bottom: 10%;
+    right: -200px;
+    background: var(--neon-purple);
 }
 
 @font-face {
     font-family: 'cubano';
     src: url(fonts/Cubano.ttf);
 }
+
 @font-face {
     font-family: 'robot';
     src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);

@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio |
-         Developpeur Fullstack</title>
+    <title>Portfolio | Developpeur Fullstack</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="script/script.js"></script>
 </head>
 
 <body>
@@ -20,41 +20,43 @@
     <div class="ligne-sep"></div>
 
     <article>
-        <section id="titre-page">
-            <h1>Codeur d'idée,<br>Bâtisseur de site web</h1>
+        <section>
+            <div id="titre-page">
+                <h1>Codeur d'idée,<br>Bâtisseur de site web</h1>
+            </div>
+
+            <div id="contenu">
+                <div id="technique" class="div-contenu">
+                    <h2>Compétences Techniques :</h2>
+                    <ul>
+                        <li>Font-end : HTML 5, CSS 3.</li>
+                        <li>Back-end : TypeScript, Javascript.</li>
+                        <li>Outils : VSCode, Git.</li>
+                    </ul>
+                </div>
+                <div id="profile" class="div-contenu">
+                    <h2>Mon Profil :</h2>
+                    <ul>
+                        <li>Apprentissage : Apprentissage auto-didacte en web poussé.</li>
+                        <li>Formation : BUT Informatique (2025-2028).</li>
+                        <li>Objectif : Faire parti d'une équipe de développement.</li>
+                    </ul>
+                </div>
+                <div id="methode" class="div-contenu">
+                    <h2>Mes Méthodes :</h2>
+                    <ul>
+                        <li>Clean Code : Respect des balises sémantiques HTML5.</li>
+                        <li>Versionnage : Utilisation de Git pour chaque étape de projet.</li>
+                        <li>Coopération : Utilisation de commentaires pour la compréhension du code</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="neon neon-gauche"></div>
+            <div class="neon neon-droite"></div>
         </section>
 
-        <section id="contenu">
-            <div id="technique" class="div-contenu">
-                <h2>Compétences Techniques :</h2>
-                <ul>
-                    <li>Font-end : HTML 5, CSS 3.</li>
-                    <li>Back-end : TypeScript, Javascript.</li>
-                    <li>Outils : VSCode, Git.</li>
-                </ul>
-            </div>
-            <div id="profile" class="div-contenu">
-                <h2>Mon Profile :</h2>
-                <ul>
-                    <li>Apprentissage : Apprentissage auto-didacte en web poussé.</li>
-                    <li>Formation : BUT Informatique (2025-2028).</li>
-                    <li>Objectif : Faire parti d'une équipe de développement.</li>
-                </ul>
-            </div>
-            <div id="methode" class="div-contenu">
-                <h2>Mes Méthodes :</h2>
-                <ul>
-                    <li>Clean Code : Respect des balises sémantiques HTML5.</li>
-                    <li>Versionnage : Utilisation de Git pour chaque étape de projet.</li>
-                    <li>Coopération : Utilisation de commentaires pour la compréhension du code</li>
-                </ul>
-            </div>
-        </section>
-
-        <div id="neon-gauche" class="neon"></div>
-        <div id="neon-droite" class="neon"></div>
-
-       <div id="frise">
+        <section id="frise">
             <h1 id="titre-pipeline">Mon PipeLine d'Apprentissage</h1>
 
             <div class="etape-pipeline" id="etape-html">
@@ -88,6 +90,74 @@
                     <p>Développement Back-end Robustes</p>
                 </div>
             </div>
-        </div>
+
+            <div class="neon neon-gauche"></div>
+            <div class="neon neon-droite"></div>
+       </section>
+
+        <section id="lab">
+            <h1>Mes Capacités</h1>
+
+            <div id="flex-lab">
+                <div id="Calculette">
+                    <h3>Calculette TS</h3>
+                    <div class="flex">
+                        <input type="text" id="ecran-calc" class="ecran-return" readonly>
+                        <button id="btn-back-calc" class="btn-lab btn-calc"><-</button>
+                        <button id="btn-clear-calc" class="btn-lab btn-calc">C</button>
+                    </div>
+                    <div class="flex">
+                        <button id="btn7" class="btn-lab btn-calc">7</button>
+                        <button id="btn8" class="btn-lab btn-calc">8</button>
+                        <button id="btn9" class="btn-lab btn-calc">9</button>
+                        <button id="btn-div" class="btn-lab btn-calc">/</button>
+                    </div>
+                    <div class="flex">
+                        <button id="btn4" class="btn-lab btn-calc">4</button>
+                        <button id="btn5" class="btn-lab btn-calc">5</button>
+                        <button id="btn6" class="btn-lab btn-calc">6</button>
+                        <button id="btn-mul" class="btn-lab btn-calc">x</button>
+                    </div>
+                    <div class="flex">
+                        <button id="btn1" class="btn-lab btn-calc">1</button>
+                        <button id="btn2" class="btn-lab btn-calc">2</button>
+                        <button id="btn3" class="btn-lab btn-calc">3</button>
+                        <button id="btn-sub" class="btn-lab btn-calc">-</button>
+                    </div>
+                    <div class="flex">
+                        <button id="btn0" class="btn-lab btn-calc">0</button>
+                        <button id="btn-point" class="btn-lab btn-calc">.</button>
+                        <button id="btn-egal" class="btn-lab btn-calc">=</button>
+                        <button id="btn-add" class="btn-lab btn-calc">+</button>
+                    </div>
+                </div>
+
+                <div id="mastermind">
+                    <h3>Mastermind TS</h3>
+                    <div id="ecran-mastermind" class="ecran-return"></div>
+                    <div id="historique-mm" class="ecran-return"></div>
+                    
+                    <div id="class-btn-mm">
+                        <div class="flex">
+                            <button id="btnA" class="btn-lab btn-mm">A</button>
+                            <button id="btnE" class="btn-lab btn-mm">E</button>
+                            <button id="btnI" class="btn-lab btn-mm">I</button>
+                            <button id="btnO" class="btn-lab btn-mm">O</button>
+                            <button id="btnU" class="btn-lab btn-mm">U</button>
+                            <button id="btnY" class="btn-lab btn-mm">Y</button>
+                        </div>
+                        <div class="flex">
+                            <button id="btn-back-mm" class="btn-lab btn-mm"><-</button>
+                            <button id="btn-clear-mm" class="btn-lab btn-mm">C</button>
+                            <button id="btn-reset-mm" class="btn-lab btn-mm">Reset</button>
+                            <button id="btn-valider-mm" class="btn-lab btn-mm">Valider</button>
+                            <button id="btn-diff-mm" class="btn-lab btn-mm">Difficulté</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="neon neon-gauche"></div>
+            <div class="neon neon-droite"></div>
+        </section>
     </article>
 </body> 

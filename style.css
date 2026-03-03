@@ -1,10 +1,13 @@
 :root {
+    /*Couleurs page*/
     --bg: #1E2329;
     --bg-relief: #2A3038;
     --neon-cyan: #00D2FF;
     --neon-purple: #9D50BB;
     --text-dim: #8B949E;
     --text : #f0f2f5;
+
+    /*Dim Box*/
     --scale-contenu-ratio: 1;
     --scale-contenu-width: 30em;
     --scale-contenu-height: 11em;
@@ -23,6 +26,12 @@ html, body {
     background-color: var(--bg);
     color: var(--text);
     font-family: 'robot', sans-serif;
+}
+
+.flex{
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
 }
 
 header {
@@ -98,7 +107,7 @@ header a {
     border: 1px solid var(--neon-purple);
     background: rgba(255, 255, 255, 0.02);
     font-family: 'cubano';
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
 }
 
@@ -196,6 +205,10 @@ header a {
     transform: scale(1.3);
 }
 
+#frise:has(.info-etape:hover).cercle-pipeline.ts-futur{
+    transform: scale(1.3);
+}
+
 .info-etape {
     position: absolute;
     width: 350px;
@@ -231,24 +244,97 @@ header a {
     transform-origin: left center;
 }
 
-.neon {
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    filter: blur(150px);
-    opacity: 0.1;
-    z-index: -2;
-    pointer-events: none;
+#lab{
+    position: relative;
+    text-align: center;
+    font-family: 'cubano';
+    padding: 2em;
 }
 
-#neon-gauche {
+#lab h3{
+    padding: 5em;
+}
+
+#flex-lab{
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
+}
+
+.btn-lab{
+    color: white;
+    margin: 4px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    border: 1px solid var(--neon-cyan);
+    background: transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.btn-lab:hover {
+    background: var(--neon-cyan);
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+}
+
+.ecran-return{
+    color: white;
+    margin: 4px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    border: 1px solid var(--neon-cyan);
+    background: transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.ecran-return:hover{
+    background: var(--neon-cyan);
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+    cursor: default;
+}
+
+#ecran-calc{
+    max-width: 150px;
+}
+
+#ecran-mastermind{
+    margin: 1em;
+    padding: 2em;
+}
+
+.lettre-bp, .lettre-mp, .lettre-inc {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.lettre-bp{background-color: #2ecc71;}
+.lettre-mp{background-color: #e67e22;} 
+.lettre-inc{background-color: #e74c3c;}
+
+#historique-mm{
+    padding: 1em;
+}
+
+.neon {
+    position: absolute;
+    padding: 10em;
+    filter: blur(150px);
+    opacity: 0.2;
+}
+
+.neon-gauche {
     top: 10%;
     left: -200px;
     background: var(--neon-cyan);
 }
 
-#neon-droite {
+.neon-droite {
     bottom: 10%;
     right: -200px;
     background: var(--neon-purple);

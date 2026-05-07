@@ -17,6 +17,10 @@
     --shadow: 0 4px 20px rgba(30, 64, 175, 0.1);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     text-shadow: rgba(30, 64, 175, 0.1);
     z-index: 3;

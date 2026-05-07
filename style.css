@@ -345,6 +345,7 @@ header i:hover {
         height: 60px;
         display: flex;
         align-items: center;
+        z-index: 4;
     }
 
     #iContender {

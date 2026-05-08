@@ -335,7 +335,6 @@ header i:hover {
         overflow-x: hidden;
     }
 
-    /* Navigation : sidebar → barre horizontale fixe en bas */
     header {
         top: auto;
         bottom: 0;
@@ -366,7 +365,6 @@ header i:hover {
         font-size: 30px;
     }
 
-    /* Layout global : suppression du décalage latéral */
     #plusHeader {
         margin-left: 0;
         width: 100%;
@@ -375,7 +373,6 @@ header i:hover {
         box-sizing: border-box;
     }
 
-    /* Section Intro */
     #imgTxt {
         flex-direction: column;
         align-items: center;
@@ -413,7 +410,6 @@ header i:hover {
         margin: 0 auto;
     }
 
-    /* Capacités : empilement vertical */
     .capaFlex {
         flex-direction: column;
         align-items: center;
@@ -426,7 +422,6 @@ header i:hover {
         box-sizing: border-box;
     }
 
-    /* CV & Contact : iframes pleine largeur */
     #cv iframe,
     #contact iframe {
         width: 100%;
@@ -434,7 +429,6 @@ header i:hover {
         box-sizing: border-box;
     }
 
-    /* Typographie : réduction des tailles */
     h1 {
         font-size: 160%;
     }
@@ -448,7 +442,6 @@ header i:hover {
         margin-bottom: 1em;
     }
 
-    /* Effets de lumière : pas de scroll horizontal parasite */
     .light {
         max-width: 100vw;
         left: auto;

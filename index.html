@@ -12,20 +12,390 @@
     </head>
 
     <body>
-        <article id="titreHaut">
-            <h2 class="textGradient"
-                ><b>Salut !</b> Je m'appelle Victor et je suis
-                <b>Développeur Web</b></h2
-            >
-            <p id="pIntro">
-                Etudiant en <b>informatique</b>, je code des sites web pour
-                <b>particulers <b>/</b> entreprises</b>
-            </p>
+        <section id="1"></section>
 
-            <div id="social">
-                <a href=""><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href=""><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+        <header class="navbar">
+            <div class="logo"
+                ><a href="#1"><img src="img/logo V.png" alt="logoV" /></a
+            ></div>
+            <nav>
+                <a href="#2"><span class="nav-num">0.</span> Projets</a>
+                <a href="#3"><span class="nav-num">1.</span> Profile</a>
+                <a href="#4"><span class="nav-num">2.</span> Compétences</a>
+                <a href="#5"><span class="nav-num">3.</span> Contact</a>
+            </nav>
+        </header>
+
+        <div class="blurtop"></div>
+
+        <main class="hero">
+            <section id="1"></section>
+            <div class="hero-content">
+                <div class="greeting-wrapper">
+                    <div class="dots-bg"></div>
+                    <p class="greeting">Hey there! I'm -</p>
+                </div>
+
+                <h1 class="name-gradient">Victor Lelong</h1>
+
+                <p class="bio">
+                    <span class="bio-highlight"
+                        >Étudiant en 2e année BUT Informatique.</span
+                    >
+                    Passionné par le développement d'applications, de
+                    l'interface jusqu'à la base de données.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" class="social-btn"
+                        ><i class="fa-brands fa-github"></i> GitHub</a
+                    >
+                    <a href="#" class="social-btn"
+                        ><i class="fa-brands fa-linkedin"></i> Linkedin</a
+                    >
+                    <a href="#" class="social-btn"
+                        ><i class="fa-solid fa-envelope"></i> Contact</a
+                    >
+                </div>
+
+                <div id="divBtnBas">
+                    <a
+                        class="inline-flex items-center gap-2 rounded-full border border-indigo-600 bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700 focus-visible:ring-4 focus-visible:ring-indigo-200 focus-visible:outline-none dark:border-indigo-300 dark:bg-indigo-300 dark:text-gray-900 dark:hover:bg-indigo-200 dark:focus-visible:ring-indigo-700"
+                        href="#2"
+                    >
+                        <span>Mes projets</span>
+
+                        <svg
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 rtl:rotate-180"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                            />
+                        </svg>
+                    </a>
+
+                    <a
+                        class="inline-flex items-center gap-2 rounded-full border border-indigo-600 px-6 py-3 text-sm font-semibold text-indigo-600 transition-colors hover:bg-indigo-50 focus-visible:ring-4 focus-visible:ring-indigo-200 focus-visible:outline-none dark:border-indigo-300 dark:text-indigo-300 dark:hover:bg-indigo-800 dark:focus-visible:ring-indigo-700"
+                        href="img/Lelonf Victor CV.pdf"
+                    >
+                        <svg
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 rtl:rotate-180"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                            />
+                        </svg>
+
+                        <span>Mon CV</span>
+                    </a>
+                </div>
             </div>
-        </article>
+
+            <!-- Colonne Droite : Photo avec effet Glow -->
+            <div class="hero-visual">
+                <div class="glow-circle"></div>
+                <img
+                    src="img/moi.png"
+                    alt="Victor Lelong"
+                    class="profile-pic"
+                />
+            </div>
+        </main>
+
+        <section id="projets" class="main-projet">
+            <h2 class="section-title">Mes projets</h2>
+            <section id="2"></section>
+            <div class="projets-grid">
+                <!-- Carte Projet 1 -->
+                <article class="projet-card">
+                    <h3>Outil de gestion de salle</h3>
+                    <p class="projet-date">Projet académique - 2026</p>
+                    <p class="projet-desc"
+                        >Créer un logiciel web pour gérer des salles de cours</p
+                    >
+
+                    <div class="projet-tags">
+                        <span class="tag">Front-end : HTML / CSS / TS</span>
+                        <span class="tag">Back-end : SQL / PhP</span>
+                    </div>
+
+                    <a href="projet-gestionSalle.html" class="projet-link"
+                        >Voir les détails &rarr;</a
+                    >
+                </article>
+
+                <article class="projet-card">
+                    <h3>API Météo</h3>
+                    <p class="projet-date">Projet Personnel - 2026</p>
+                    <p class="projet-desc">
+                        Application interrogeant une API externe pour afficher
+                        les prévisions météorologiques en temps réel avec une
+                        interface dynamique.
+                    </p>
+
+                    <div class="projet-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">API REST</span>
+                        <span class="tag">HTML/CSS</span>
+                    </div>
+
+                    <a href="projet-meteo.html" class="projet-link"
+                        >Voir les détails &rarr;</a
+                    >
+                </article>
+
+                <article class="projet-card">
+                    <h3>Kayo Gaming</h3>
+                    <p class="projet-date">Projet Académique - 2026</p>
+                    <p class="projet-desc">
+                        Refonte web complète et développement d'un formulaire
+                        d'inscription multi-étapes.
+                    </p>
+
+                    <div class="projet-tags">
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Figma (web disign)</span>
+                    </div>
+
+                    <a href="projet-kayo.html" class="projet-link"
+                        >Voir les détails &rarr;</a
+                    >
+                </article>
+            </div>
+        </section>
+
+        <div class="blur-projet-1"></div>
+        <div class="blur-projet-2"></div>
+
+        <section id="profil" class="main-profil">
+            <h2 class="section-title">Mon Profil</h2>
+
+            <!-- Introduction courte -->
+            <div class="profil-intro">
+                <p>
+                    Étudiant en 2e année de BUT Informatique à l'IUT de Metz.
+                    Parcour RA (réalisation applications), de la conception, au
+                    développement et la validation. J'aime faire des
+                    applications avec des logiques claire pour avec une
+                    interface soignée
+                </p>
+            </div>
+
+            <!-- Grille des informations rapides -->
+            <div class="profil-stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Formation</span>
+                    <span class="stat-value"
+                        >BUT Informatique - IUT de Metz</span
+                    >
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Localisation</span>
+                    <span class="stat-value">Grand Est, France</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Environnement</span>
+                    <span class="stat-value">Linux Fedora - VSCode</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Statut</span>
+                    <span class="stat-value">En recherche de stage</span>
+                </div>
+            </div>
+
+            <!-- Compétences et Intérêts -->
+            <div class="profil-details-grid">
+                <article class="detail-card">
+                    <h3>Compétences Techniques</h3>
+                    <div class="projet-tags justify-center">
+                        <span class="tag">HTML / CSS</span>
+                        <span class="tag">JavaScript / TypeScript</span>
+                        <span class="tag">C</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">PhP</span>
+                    </div>
+                </article>
+
+                <article class="detail-card">
+                    <h3>Profile Junior Fiable</h3>
+                    <div class="projet-tags justify-center">
+                        <span class="tag">Projets académique en équipe</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Organisation</span>
+                        <span class="tag">Analyse statistique</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="competences" class="main-competences">
+            <div class="competences-header">
+                <h2 class="section-title">Compétences</h2>
+                <p class="competences-subtitle">
+                    Tout ce qui figure ici est pratiqué en cours ou en projet,
+                    au niveau réel d'un étudiant de BUT.
+                </p>
+            </div>
+
+            <div class="competences-grid">
+                <!-- Boîte 1 : Développement Web (Mise en avant) -->
+                <article class="comp-card card-web highlight-card">
+                    <div class="card-header">
+                        <h3>Développement Web</h3>
+                        <p>Interfaces et intégration</p>
+                    </div>
+                    <div class="projet-tags">
+                        <span class="tag">HTML & CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">Tailwind CSS</span>
+                    </div>
+                </article>
+
+                <!-- Boîte 2 : Données -->
+                <article class="comp-card card-data">
+                    <div class="card-header">
+                        <h3>Données</h3>
+                        <p>Modéliser et requêter</p>
+                    </div>
+                    <div class="projet-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">MCD / MLD</span>
+                        <span class="tag">Looping</span>
+                        <span class="tag">phpMyAdmin</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">CSV</span>
+                    </div>
+                </article>
+
+                <!-- Boîte 3 : Langages -->
+                <article class="comp-card card-lang">
+                    <div class="card-header">
+                        <h3>Langages</h3>
+                        <p>Bases solides</p>
+                    </div>
+                    <div class="projet-tags">
+                        <span class="tag">C</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Python notions</span>
+                    </div>
+                </article>
+
+                <!-- Boîte 4 : Outils -->
+                <article class="comp-card card-tools">
+                    <div class="card-header">
+                        <h3>Outils</h3>
+                        <p>Environnement de travail</p>
+                    </div>
+                    <div class="projet-tags">
+                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">Overleaf</span>
+                    </div>
+                </article>
+
+                <!-- Boîte 5 : Méthodes -->
+                <article class="comp-card card-methods">
+                    <div class="card-header">
+                        <h3>Méthodes</h3>
+                        <p>Travailler proprement</p>
+                    </div>
+                    <div class="projet-tags">
+                        <span class="tag">Tests fonctionnels</span>
+                        <span class="tag">Responsive design</span>
+                        <span class="tag">Accessibilité web</span>
+                        <span class="tag">Travail en équipe</span>
+                        <span class="tag">Organisation</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="main-contact">
+            <div class="contact-header">
+                <h2 class="section-title">Me Contacter</h2>
+                <p class="contact-subtitle"
+                    >Une question, un projet ou une opportunité de stage ?
+                    N'hésitez pas à m'envoyer un message.</p
+                >
+            </div>
+
+            <div class="contact-grid">
+                <!-- Colonne Gauche : Informations directes -->
+                <div class="contact-info">
+                    <article class="info-card">
+                        <h3>Email</h3>
+                        <a href="mailto:ton.email@exemple.fr"
+                            >victor.lelong57@orange.fr</a
+                        >
+                    </article>
+
+                    <article class="info-card">
+                        <h3>Localisation</h3>
+                        <p>Metz, Grand Est</p>
+                    </article>
+                </div>
+
+                <!-- Le formulaire viendra se placer juste en dessous dans ton HTML -->
+                <!-- Colonne Droite : Formulaire -->
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Votre nom"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="vous@exemple.fr"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Bonjour Victor..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit"
+                        >Envoyer le message</button
+                    >
+                </form>
+            </div>
+            <!-- Fin de la contact-grid -->
+        </section>
     </body>
 </html>

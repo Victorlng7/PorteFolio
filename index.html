@@ -9,6 +9,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
         <script src="https://cdn.tailwindcss.com"></script>
+        <script type="module" src="script.js"></script>
     </head>
 
     <body>
@@ -29,7 +30,6 @@
         <div class="blurtop"></div>
 
         <main class="hero">
-            <section id="1"></section>
             <div class="hero-content">
                 <div class="greeting-wrapper">
                     <div class="dots-bg"></div>
@@ -118,12 +118,12 @@
             </div>
         </main>
 
+        <section id="2"></section>
         <section id="projets" class="main-projet">
             <h2 class="section-title">Mes projets</h2>
-            <section id="2"></section>
             <div class="projets-grid">
                 <!-- Carte Projet 1 -->
-                <article class="projet-card">
+                <article class="projet-card element-cache">
                     <h3>Outil de gestion de salle</h3>
                     <p class="projet-date">Projet académique - 2026</p>
                     <p class="projet-desc"
@@ -140,7 +140,7 @@
                     >
                 </article>
 
-                <article class="projet-card">
+                <article class="projet-card element-cache">
                     <h3>API Météo</h3>
                     <p class="projet-date">Projet Personnel - 2026</p>
                     <p class="projet-desc">
@@ -150,9 +150,8 @@
                     </p>
 
                     <div class="projet-tags">
-                        <span class="tag">JavaScript</span>
+                        <span class="tag">Vue.js</span>
                         <span class="tag">API REST</span>
-                        <span class="tag">HTML/CSS</span>
                     </div>
 
                     <a href="projet-meteo.html" class="projet-link"
@@ -160,30 +159,32 @@
                     >
                 </article>
 
-                <article class="projet-card">
-                    <h3>Kayo Gaming</h3>
-                    <p class="projet-date">Projet Académique - 2026</p>
+                <article class="projet-card element-cache">
+                    <h3>Table de son Arduino</h3>
+                    <p class="projet-date">Projet Personnel - 2026</p>
                     <p class="projet-desc">
-                        Refonte web complète et développement d'un formulaire
-                        d'inscription multi-étapes.
+                        Creation d'un dispositif me permettant d'interragir avec
+                        le mélangeur de volume windows depuis un périférique
                     </p>
 
                     <div class="projet-tags">
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">Figma (web disign)</span>
+                        <span class="tag">Fonctionnement : C++ / Python</span>
+                        <span class="tag">Maquettage : TinkerCad</span>
                     </div>
 
-                    <a href="projet-kayo.html" class="projet-link"
+                    <a href="projet-tds" class="projet-link"
                         >Voir les détails &rarr;</a
                     >
                 </article>
             </div>
         </section>
 
-        <div class="blur-projet-1"></div>
-        <div class="blur-projet-2"></div>
+        <div class="blur-projet-1 element-cache"></div>
+        <div class="blur-projet-2 element-cache"></div>
 
-        <section id="profil" class="main-profil">
+        <section id="3"></section>
+
+        <section id="profil" class="main-profil element-cache">
             <h2 class="section-title">Mon Profil</h2>
 
             <!-- Introduction courte -->
@@ -199,21 +200,21 @@
 
             <!-- Grille des informations rapides -->
             <div class="profil-stats-grid">
-                <div class="stat-card">
+                <div class="stat-card element-cache">
                     <span class="stat-label">Formation</span>
                     <span class="stat-value"
                         >BUT Informatique - IUT de Metz</span
                     >
                 </div>
-                <div class="stat-card">
+                <div class="stat-card element-cache">
                     <span class="stat-label">Localisation</span>
                     <span class="stat-value">Grand Est, France</span>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card element-cache">
                     <span class="stat-label">Environnement</span>
                     <span class="stat-value">Linux Fedora - VSCode</span>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card element-cache">
                     <span class="stat-label">Statut</span>
                     <span class="stat-value">En recherche de stage</span>
                 </div>
@@ -221,7 +222,7 @@
 
             <!-- Compétences et Intérêts -->
             <div class="profil-details-grid">
-                <article class="detail-card">
+                <article class="detail-card element-cache">
                     <h3>Compétences Techniques</h3>
                     <div class="projet-tags justify-center">
                         <span class="tag">HTML / CSS</span>
@@ -229,10 +230,11 @@
                         <span class="tag">C</span>
                         <span class="tag">SQL</span>
                         <span class="tag">PhP</span>
+                        <span class="tag">Vue.js</span>
                     </div>
                 </article>
 
-                <article class="detail-card">
+                <article class="detail-card element-cache">
                     <h3>Profile Junior Fiable</h3>
                     <div class="projet-tags justify-center">
                         <span class="tag">Projets académique en équipe</span>
@@ -244,8 +246,10 @@
             </div>
         </section>
 
+        <section id="4"></section>
+
         <section id="competences" class="main-competences">
-            <div class="competences-header">
+            <div class="competences-header element-cache">
                 <h2 class="section-title">Compétences</h2>
                 <p class="competences-subtitle">
                     Tout ce qui figure ici est pratiqué en cours ou en projet,
@@ -255,7 +259,9 @@
 
             <div class="competences-grid">
                 <!-- Boîte 1 : Développement Web (Mise en avant) -->
-                <article class="comp-card card-web highlight-card">
+                <article
+                    class="comp-card card-web highlight-card element-cache"
+                >
                     <div class="card-header">
                         <h3>Développement Web</h3>
                         <p>Interfaces et intégration</p>
@@ -265,12 +271,12 @@
                         <span class="tag">JavaScript</span>
                         <span class="tag">TypeScript</span>
                         <span class="tag">PHP</span>
-                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Vue.js</span>
                     </div>
                 </article>
 
                 <!-- Boîte 2 : Données -->
-                <article class="comp-card card-data">
+                <article class="comp-card card-data element-cache">
                     <div class="card-header">
                         <h3>Données</h3>
                         <p>Modéliser et requêter</p>
@@ -286,7 +292,7 @@
                 </article>
 
                 <!-- Boîte 3 : Langages -->
-                <article class="comp-card card-lang">
+                <article class="comp-card card-lang element-cache">
                     <div class="card-header">
                         <h3>Langages</h3>
                         <p>Bases solides</p>
@@ -299,7 +305,7 @@
                 </article>
 
                 <!-- Boîte 4 : Outils -->
-                <article class="comp-card card-tools">
+                <article class="comp-card card-tools element-cache">
                     <div class="card-header">
                         <h3>Outils</h3>
                         <p>Environnement de travail</p>
@@ -313,7 +319,7 @@
                 </article>
 
                 <!-- Boîte 5 : Méthodes -->
-                <article class="comp-card card-methods">
+                <article class="comp-card card-methods element-cache">
                     <div class="card-header">
                         <h3>Méthodes</h3>
                         <p>Travailler proprement</p>
@@ -327,10 +333,15 @@
                     </div>
                 </article>
             </div>
+
+            <div class="blur-comp-1"></div>
+            <div class="blur-comp-2"></div>
         </section>
 
+        <section id="5"></section>
+
         <section id="contact" class="main-contact">
-            <div class="contact-header">
+            <div class="contact-header element-cache">
                 <h2 class="section-title">Me Contacter</h2>
                 <p class="contact-subtitle"
                     >Une question, un projet ou une opportunité de stage ?
@@ -338,7 +349,7 @@
                 >
             </div>
 
-            <div class="contact-grid">
+            <div class="contact-grid element-cache">
                 <!-- Colonne Gauche : Informations directes -->
                 <div class="contact-info">
                     <article class="info-card">
@@ -348,15 +359,19 @@
                         >
                     </article>
 
-                    <article class="info-card">
+                    <article class="info-card element-cache">
                         <h3>Localisation</h3>
-                        <p>Metz, Grand Est</p>
+                        <p>Metz / Rodeamck, Grand Est</p>
                     </article>
                 </div>
 
                 <!-- Le formulaire viendra se placer juste en dessous dans ton HTML -->
                 <!-- Colonne Droite : Formulaire -->
-                <form class="contact-form" action="#" method="POST">
+                <form
+                    class="contact-form element-cache"
+                    action="#"
+                    method="POST"
+                >
                     <div class="form-group">
                         <label for="name">Nom</label>
                         <input

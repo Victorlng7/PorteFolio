@@ -22,6 +22,11 @@
     --color-accent-blue: #3b82f6;
     --color-accent-indigo: #4338ca;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--color-bg-dark);
     color: var(--color-text-primary);
@@ -39,9 +44,13 @@ body {
 }
 
 .navbar {
+    top: 0;
+    position: fixed;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 85%;
     padding: 2rem 0;
 }
 
@@ -62,12 +71,12 @@ body {
     align-items: center;
     justify-content: space-between;
     min-height: 80vh;
-    gap: 2rem;
+    gap: 2em;
 }
 
 .hero-content {
     flex: 1;
-    max-width: 60%;
+    max-width: 30%;
 }
 
 .greeting-wrapper {
@@ -133,7 +142,7 @@ body {
     color: var(--color-text-primary);
     text-decoration: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 50px; /* Forme de pilule */
+    border-radius: 50px;
     font-size: 0.9rem;
     transition: background-color 0.3s;
 }
@@ -150,7 +159,6 @@ body {
 /* Photo moi */
 .hero-visual {
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 50em;
@@ -158,6 +166,7 @@ body {
 }
 
 .glow-circle {
+    top: 13em;
     position: absolute;
     width: 70%;
     height: 70%;
@@ -168,33 +177,47 @@ body {
 }
 
 .profile-pic {
+    border: 10px solid transparent;
+    background:
+        linear-gradient(var(--color-text-cyan), var(--color-accent-indigo))
+            padding-box,
+        linear-gradient(
+                to bottom,
+                var(--color-text-cyan),
+                var(--color-accent-indigo)
+            )
+            border-box;
+    border-radius: 50%;
+    margin: 10em 0;
     position: relative;
     z-index: 2;
-    width: 50em;
-    height: 55em;
+    width: 33em;
+    height: 40em;
     object-fit: cover;
 }
 
 /* Blurs */
 
 .blur-projet-1 {
-    top: 90em;
+    top: 120em;
     left: 20em;
     background-color: var(--color-text-cyan);
-    padding: 10em;
+    padding: 5em;
     position: absolute;
     z-index: -1;
-    filter: blur(300px);
+    filter: blur(400px);
+    opacity: 0.8;
 }
 
 .blur-projet-2 {
-    top: 70em;
-    left: 70em;
+    top: 100em;
+    left: 90em;
     background-color: var(--color-text-cyan);
-    padding: 10em;
+    padding: 5em;
     position: absolute;
     z-index: -1;
-    filter: blur(300px);
+    filter: blur(200px);
+    opacity: 0.8;
 }
 
 .blurtop {
@@ -207,6 +230,27 @@ body {
     filter: blur(250px);
 }
 
+.blur-comp-1 {
+    top: 190em;
+    left: 90em;
+    background-color: var(--color-accent-indigo);
+    padding: 5em;
+    position: absolute;
+    z-index: -1;
+    filter: blur(500px);
+    opacity: 0.5;
+}
+
+.blur-comp-2 {
+    top: 210em;
+    left: 30em;
+    background-color: var(--color-accent-blue);
+    padding: 7em;
+    position: absolute;
+    z-index: -1;
+    filter: blur(300px);
+    opacity: 0.5;
+}
 /* Partie Projets */
 
 .main-projet {
@@ -596,6 +640,21 @@ body {
 
 .btn-submit:hover {
     opacity: 0.9;
+}
+
+/* Animation scrollbar */
+
+.element-cache {
+    opacity: 0;
+    transform: translateY(100px);
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+}
+
+.element-cache.est-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Pour que ça reste propre sur téléphone */

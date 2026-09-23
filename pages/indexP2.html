@@ -1,0 +1,91 @@
+<head>
+    <link rel="stylesheet" href="../style.css" />
+    <script type="module" src="../script.js"></script>
+</head>
+
+<header class="project-hero element-cache">
+    <a href="../index.html#2" class="back-link">&larr; Retour au portfolio</a>
+
+    <h1 class="project-title gradient-text">Application Météo Vue.js</h1>
+    <p class="project-subtitle"
+        >Projet personnel de consommation d'API en temps réel</p
+    >
+
+    <div class="projet-tags justify-center">
+        <span class="tag">Vue.js</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">API REST</span>
+        <span class="tag">Front-end</span>
+    </div>
+</header>
+
+<main class="project-main">
+    <!-- Section 1 : Introduction et Visuel -->
+    <section class="project-intro">
+        <div class="intro-text element-cache">
+            <h2>Le Contexte</h2>
+            <p>
+                Ce projet personnel est né d'une volonté d'approfondir mes
+                compétences sur le framework Vue.js et d'explorer la gestion de
+                données asynchrones.
+            </p>
+            <p>
+                L'utilisateur peut saisir le nom de n'importe quelle ville ou
+                village dans le monde. L'application interroge alors
+                instantanément une API météorologique externe pour récupérer les
+                données actuelles (température, conditions, humidité) et met à
+                jour l'interface dynamiquement sans aucun rechargement de page.
+            </p>
+        </div>
+        <div class="intro-visual element-cache">
+            <div class="image-placeholder">
+                <span>Capture d'écran de l'interface météo</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 : Les fonctionnalités / Tes Bullet Points -->
+    <section class="project-features">
+        <h2>Détails Techniques & Fonctionnalités</h2>
+
+        <div class="features-grid">
+            <article class="feature-card element-cache">
+                <div class="feature-icon">⚡</div>
+                <h3>Réactivité avec Vue.js</h3>
+                <p
+                    >Utilisation du système de réactivité de Vue.js (comme
+                    <code>v-model</code> pour la barre de recherche) pour lier
+                    instantanément les saisies de l'utilisateur aux variables
+                    d'état du composant, offrant une interface extrêmement
+                    fluide.</p
+                >
+            </article>
+
+            <article class="feature-card element-cache">
+                <div class="feature-icon">🌐</div>
+                <h3>Consommation d'API REST</h3>
+                <p
+                    >Gestion des requêtes HTTP asynchrones via fetch vers une
+                    API externe. Traitement des réponses au format JSON, gestion
+                    des promesses et interception des erreurs (par exemple, si
+                    la ville saisie n'existe pas).</p
+                >
+            </article>
+
+            <!-- Le point crucial sur l'architecture et l'amélioration -->
+            <article class="feature-card element-cache">
+                <div class="feature-icon">🔐</div>
+                <h3>Architecture & Sécurité (Axes d'amélioration)</h3>
+                <p
+                    >Ce projet ayant été pensé comme un exercice purement
+                    Front-End, la clé d'API est actuellement appelée côté
+                    client. J'ai conscience que pour une mise en production
+                    réelle, la bonne pratique exigerait la création d'un
+                    micro-backend (Node.js ou PHP) afin de stocker cette clé de
+                    manière sécurisée dans un fichier <code>.env</code> et de
+                    masquer les requêtes au navigateur.</p
+                >
+            </article>
+        </div>
+    </section>
+</main>

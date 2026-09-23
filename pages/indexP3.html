@@ -1,0 +1,95 @@
+<head>
+    <link rel="stylesheet" href="../style.css" />
+    <script type="module" src="../script.js"></script>
+</head>
+
+<!-- En-tête de la page projet -->
+<header class="project-hero element-cache">
+    <a href="../index.html#2" class="back-link">&larr; Retour au portfolio</a>
+
+    <h1 class="project-title gradient-text">Table de Mixage Arduino</h1>
+    <p class="project-subtitle"
+        >Projet personnel de conception matérielle et logicielle</p
+    >
+
+    <div class="projet-tags justify-center">
+        <span class="tag">C++</span>
+        <span class="tag">Python</span>
+        <span class="tag">Arduino</span>
+        <span class="tag">PlatformIO</span>
+    </div>
+</header>
+
+<main class="project-main">
+    <!-- Section 1 : Introduction et Visuel -->
+    <section class="project-intro">
+        <div class="intro-text element-cache">
+            <h2>Le Contexte</h2>
+            <p>
+                Ce projet personnel est né de la volonté de lier le monde
+                physique au monde numérique en construisant mon propre
+                périphérique de contrôle. L'objectif était de créer une
+                véritable table de mixage matérielle pour gérer les flux audio
+                de mon ordinateur, en utilisant des composants électroniques
+                comme des potentiomètres et des boutons.
+            </p>
+            <p>
+                C'est un projet très complet qui m'a poussé à sortir de ma zone
+                de confort. J'ai dû gérer toute la chaîne de transmission de
+                l'information : de la conception du schéma électrique à la
+                programmation du microcontrôleur, jusqu'à l'écriture du script
+                chargé de faire le pont avec le système d'exploitation de mon
+                PC.
+            </p>
+        </div>
+        <div class="intro-visual element-cache">
+            <div class="image-placeholder">
+                <span>Photo du montage Arduino / Capture du code</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2 : Les fonctionnalités / Tes Bullet Points -->
+    <section class="project-features element-cache">
+        <h2>Détails Techniques & Fonctionnalités</h2>
+
+        <div class="features-grid">
+            <article class="feature-card">
+                <div class="feature-icon">🔌</div>
+                <h3>Prototypage & Électronique (Tinkercad)</h3>
+                <p
+                    >Avant de manipuler les composants physiques, j'ai modélisé
+                    et testé les schémas électroniques sur
+                    <strong>Tinkercad</strong>. Cette étape m'a permis de
+                    valider les branchements (broches analogiques pour les
+                    potentiomètres, résistances de tirage pour les boutons) et
+                    de sécuriser le montage final.</p
+                >
+            </article>
+
+            <article class="feature-card element-cache">
+                <div class="feature-icon">⚙️</div>
+                <h3>Programmation</h3>
+                <p
+                    >Le firmware a été développé en C++ avec VS Code et
+                    PlatformIO. Un script Python lit ensuite les données
+                    envoyées par la carte via USB et les traduit en commandes,
+                    notamment pour régler le volume global ou par application.
+                </p>
+            </article>
+
+            <article class="feature-card element-cache">
+                <div class="feature-icon">🛠️</div>
+                <h3>Débogage Matériel vs Logiciel</h3>
+                <p
+                    >La plus grande difficulté (et le meilleur apprentissage) de
+                    ce projet a été le diagnostic des erreurs. Contrairement au
+                    développement web classique, un bug pouvait aussi bien
+                    provenir d'une erreur de logique dans le code C++ ou Python,
+                    que d'un faux contact dans le câblage ou d'un composant
+                    défectueux.</p
+                >
+            </article>
+        </div>
+    </section>
+</main>

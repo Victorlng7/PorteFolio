@@ -44,18 +44,26 @@
             <div class="hero-content">
                 <div class="greeting-wrapper">
                     <div class="dots-bg"></div>
-                    <p class="greeting">Hey there! I'm -</p>
+                    <p class="greeting" data-i18n="hero.greeting"
+                        >Hey there! I'm -</p
+                    >
                 </div>
 
                 <h1 class="name-gradient">Victor Lelong</h1>
 
                 <p class="bio">
-                    <span class="bio-highlight"
+                    <span class="bio-highlight" data-i18n="hero.highlight"
                         >Étudiant en 2e année BUT Informatique.</span
                     >
-                    Passionné par le développement d'applications, de
-                    l'interface jusqu'à la base de données.
+                    <span data-i18n="hero.bio"
+                        >Passionné par le développement d'applications, de
+                        l'interface jusqu'à la base de données.</span
+                    >
                 </p>
+
+                <a class="hero-stage-cta" href="#5" data-i18n="hero.stageCta"
+                    >Je recherche un stage — Contactez-moi</a
+                >
 
                 <div class="social-links">
                     <a href="#" class="social-btn"
@@ -130,7 +138,9 @@
 
         <section id="2"></section>
         <section id="projets" class="main-projet">
-            <h2 class="section-title">Mes projets</h2>
+            <h2 class="section-title" data-i18n="sections.projects"
+                >Mes projets</h2
+            >
             <div class="projets-grid">
                 <article class="projet-card element-cache">
                     <h3>Outil de gestion de salle</h3>
@@ -194,42 +204,65 @@
         <section id="3"></section>
 
         <section id="profil" class="main-profil element-cache">
-            <h2 class="section-title">Mon Profil</h2>
+            <h2 class="section-title" data-i18n="sections.profile"
+                >Mon Profil</h2
+            >
 
             <div class="profil-intro">
-                <p>
+                <p data-i18n="profile.intro">
                     Étudiant en 2e année de BUT Informatique à l'IUT de Metz.
                     Parcour RA (réalisation applications), de la conception, au
                     développement et la validation. J'aime faire des
                     applications avec des logiques claire pour avec une
                     interface soignée
                 </p>
+                <a class="stage-link" href="#5" data-i18n="profile.stageLink"
+                    >Je recherche un stage, parlons-en</a
+                >
             </div>
 
             <div class="profil-stats-grid">
                 <div class="stat-card element-cache">
-                    <span class="stat-label">Formation</span>
-                    <span class="stat-value"
+                    <span class="stat-label" data-i18n="profile.education"
+                        >Formation</span
+                    >
+                    <span class="stat-value" data-i18n="profile.educationValue"
                         >BUT Informatique - IUT de Metz</span
                     >
                 </div>
                 <div class="stat-card element-cache">
-                    <span class="stat-label">Localisation</span>
-                    <span class="stat-value">Grand Est, France</span>
+                    <span class="stat-label" data-i18n="profile.location"
+                        >Localisation</span
+                    >
+                    <span class="stat-value" data-i18n="profile.locationValue"
+                        >Grand Est, France</span
+                    >
                 </div>
                 <div class="stat-card element-cache">
-                    <span class="stat-label">Environnement</span>
-                    <span class="stat-value">Linux Fedora - VSCode</span>
+                    <span class="stat-label" data-i18n="profile.environment"
+                        >Environnement</span
+                    >
+                    <span
+                        class="stat-value"
+                        data-i18n="profile.environmentValue"
+                        >Linux Fedora - VSCode</span
+                    >
                 </div>
                 <div class="stat-card element-cache">
-                    <span class="stat-label">Statut</span>
-                    <span class="stat-value">En recherche de stage</span>
+                    <span class="stat-label" data-i18n="profile.status"
+                        >Statut</span
+                    >
+                    <span class="stat-value" data-i18n="profile.statusValue"
+                        >En recherche de stage</span
+                    >
                 </div>
             </div>
 
             <div class="profil-details-grid">
                 <article class="detail-card element-cache">
-                    <h3>Compétences Techniques</h3>
+                    <h3 data-i18n="profile.technical"
+                        >Compétences Techniques</h3
+                    >
                     <div class="projet-tags justify-center">
                         <span class="tag">HTML / CSS</span>
                         <span class="tag">JavaScript / TypeScript</span>
@@ -241,7 +274,7 @@
                 </article>
 
                 <article class="detail-card element-cache">
-                    <h3>Profile Junior Fiable</h3>
+                    <h3 data-i18n="profile.reliable">Profil Junior Fiable</h3>
                     <div class="projet-tags justify-center">
                         <span class="tag">Projets académique en équipe</span>
                         <span class="tag">Git</span>
@@ -256,7 +289,9 @@
 
         <section id="competences" class="main-competences">
             <div class="competences-header element-cache">
-                <h2 class="section-title">Compétences</h2>
+                <h2 class="section-title" data-i18n="sections.skills"
+                    >Compétences</h2
+                >
                 <p class="competences-subtitle">
                     Tout ce qui figure ici est pratiqué en cours ou en projet,
                     au niveau réel d'un étudiant de BUT.
@@ -343,7 +378,9 @@
 
         <section id="contact" class="main-contact">
             <div class="contact-header element-cache">
-                <h2 class="section-title">Me Contacter</h2>
+                <h2 class="section-title" data-i18n="sections.contact"
+                    >Me Contacter</h2
+                >
                 <p class="contact-subtitle"
                     >Une question, un projet ou une opportunité de stage ?
                     N'hésitez pas à m'envoyer un message.</p
@@ -363,11 +400,31 @@
                         <h3>Localisation</h3>
                         <p>Metz / Rodeamck, Grand Est</p>
                     </article>
+
+                    <article class="info-card network-card element-cache">
+                        <h3 data-i18n="contact.networks">Mes réseaux</h3>
+                        <div class="network-links">
+                            <a href="#" aria-label="GitHub"
+                                ><i class="fa-brands fa-github"></i
+                                ><span>GitHub</span></a
+                            >
+                            <a href="#" aria-label="LinkedIn"
+                                ><i class="fa-brands fa-linkedin"></i
+                                ><span>LinkedIn</span></a
+                            >
+                            <a
+                                href="mailto:victor.lelong57@orange.fr"
+                                aria-label="Email"
+                                ><i class="fa-solid fa-envelope"></i
+                                ><span>Email</span></a
+                            >
+                        </div>
+                    </article>
                 </div>
 
                 <form
                     class="contact-form element-cache"
-                    action="#"
+                    action="https://formspree.io/f/xyezjnpb"
                     method="POST"
                 >
                     <div class="form-group">

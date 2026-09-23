@@ -241,6 +241,58 @@ textarea {
     font-weight: 700;
 }
 
+.hero-stage-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+    border: 1px solid var(--coral);
+    border-radius: 0.7rem;
+    padding: 0.85rem 1.1rem;
+    overflow: hidden;
+    color: var(--ink);
+    background: rgba(255, 139, 114, 0.1);
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition:
+        color 0.4s var(--ease-out),
+        background 0.4s var(--ease-out),
+        border-color 0.4s var(--ease-out),
+        transform 0.4s var(--ease-out),
+        box-shadow 0.4s var(--ease-out);
+}
+
+.hero-stage-cta::before {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    content: "";
+    background: var(--coral);
+    box-shadow: 0 0 0 0 rgba(255, 139, 114, 0.6);
+    animation: stage-pulse 2s infinite;
+}
+
+.hero-stage-cta::after {
+    content: "→";
+    transition: transform 0.4s var(--ease-out);
+}
+
+.hero-stage-cta:hover,
+.hero-stage-cta:focus-visible {
+    border-color: var(--cyan);
+    color: var(--night);
+    background: var(--cyan);
+    box-shadow: 0 0.8rem 2rem rgba(97, 232, 208, 0.18);
+    transform: translateY(-0.25rem);
+}
+
+.hero-stage-cta:hover::after,
+.hero-stage-cta:focus-visible::after {
+    transform: translateX(0.2rem);
+}
+
 .social-links,
 #divBtnBas {
     display: flex;
@@ -466,6 +518,48 @@ textarea {
     line-height: 1.85;
     text-align: center;
 }
+
+.stage-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--cyan);
+    color: var(--cyan);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        color 0.35s var(--ease-out),
+        border-color 0.35s var(--ease-out),
+        transform 0.35s var(--ease-out);
+}
+
+.stage-link::after {
+    content: "→";
+    transition: transform 0.35s var(--ease-out);
+}
+
+.stage-link:hover {
+    border-color: var(--coral);
+    color: var(--coral);
+    transform: translateX(0.25rem);
+}
+
+.stage-link:hover::after {
+    transform: translateX(0.2rem);
+}
+
+@keyframes stage-pulse {
+    0%,
+    55%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 139, 114, 0.5);
+    }
+    25% {
+        box-shadow: 0 0 0 0.35rem rgba(255, 139, 114, 0);
+    }
+}
 .profil-stats-grid {
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 1rem;
@@ -599,6 +693,42 @@ textarea {
 .info-card a:hover {
     color: var(--cyan);
 }
+
+.network-card {
+    flex-grow: 1;
+}
+
+.network-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.network-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border: 1px solid var(--line);
+    border-radius: 0.55rem;
+    padding: 0.55rem 0.7rem;
+    color: var(--muted);
+    background: rgba(97, 232, 208, 0.05);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        color 0.35s var(--ease-out),
+        border-color 0.35s var(--ease-out),
+        background 0.35s var(--ease-out),
+        transform 0.35s var(--ease-out);
+}
+
+.network-links a:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    background: rgba(97, 232, 208, 0.12);
+    transform: translateY(-0.2rem);
+}
 .form-group {
     margin-bottom: 1.15rem;
 }
@@ -647,8 +777,8 @@ textarea {
     opacity: 0;
     transform: translateY(2rem);
     transition:
-        opacity 0.85s var(--ease-soft),
-        transform 0.85s var(--ease-soft);
+        opacity 0.6s var(--ease-soft),
+        transform 0.6s var(--ease-soft);
     transition-delay: var(--reveal-delay, 0ms);
 }
 .element-cache.est-visible {
@@ -778,7 +908,7 @@ textarea {
     .navbar {
         top: 0.7rem;
         width: calc(100% - 2.2rem);
-        padding: 0.6rem 0.8rem;
+        padding: 0.6rem 8.2rem 0.6rem 0.8rem;
     }
     .navbar nav {
         gap: 0.65rem;
@@ -841,32 +971,25 @@ textarea {
 
 .site-controls {
     position: fixed;
-    top: 1.25rem;
-    right: 4vw;
+    top: 1.5rem;
+    right: 2rem;
     z-index: 1100;
     display: flex;
     gap: 0.45rem;
     animation: control-intro 0.9s 0.3s var(--ease-out) both;
 }
 
-.navbar > .site-controls {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-}
-
 .control-button {
     display: grid;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 3.7rem;
+    height: 3.7rem;
     place-items: center;
     border: 1px solid var(--line);
     border-radius: 0.85rem;
     color: var(--ink);
     background: rgba(8, 17, 29, 0.78);
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 800;
     backdrop-filter: blur(1rem);
     transition:
@@ -884,19 +1007,19 @@ textarea {
 }
 
 .language-button {
-    width: 4rem;
+    width: 4.6rem;
 }
 
 .project-hero.element-cache.est-visible .project-title {
-    animation: title-sweep 1.1s 0.2s var(--ease-out) both;
+    animation: title-sweep 0.8s 0.1s var(--ease-out) both;
 }
 
 .project-intro .intro-text.est-visible {
-    animation: slide-in-left 0.95s var(--reveal-delay) var(--ease-out) both;
+    animation: slide-in-left 0.7s var(--reveal-delay) var(--ease-out) both;
 }
 
 .project-intro .intro-visual.est-visible {
-    animation: slide-in-right 0.95s var(--reveal-delay) var(--ease-out) both;
+    animation: slide-in-right 0.7s var(--reveal-delay) var(--ease-out) both;
 }
 
 .feature-card {
@@ -922,7 +1045,7 @@ textarea {
 }
 
 .project-features .feature-card.est-visible {
-    animation: card-pop 0.95s var(--reveal-delay) var(--ease-out) both;
+    animation: card-pop 0.72s var(--reveal-delay) var(--ease-out) both;
 }
 
 .light-theme {
@@ -990,14 +1113,18 @@ body.light-theme {
     background: rgba(97, 232, 208, 0.2) !important;
 }
 
+.light-theme .network-links a {
+    background: rgba(255, 255, 255, 0.65);
+}
+
 @keyframes control-intro {
     from {
         opacity: 0;
-        transform: translateY(calc(-50% - 0.7rem));
+        transform: translateY(-0.7rem);
     }
     to {
         opacity: 1;
-        transform: translateY(-50%);
+        transform: translateY(0);
     }
 }
 
@@ -1052,16 +1179,16 @@ body.light-theme {
 
 @media (max-width: 620px) {
     .site-controls {
-        top: 4.8rem;
-        right: 1.1rem;
+        top: 1rem;
+        right: 1rem;
     }
 
-    .navbar {
-        padding-right: 8.3rem;
+    .control-button {
+        width: 3.35rem;
+        height: 3.35rem;
     }
 
-    .navbar > .site-controls {
-        top: 50%;
-        right: 0.65rem;
+    .language-button {
+        width: 4.2rem;
     }
 }

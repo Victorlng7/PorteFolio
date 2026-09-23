@@ -3,6 +3,63 @@ const translations = {
     "nav.profile": "Profile",
     "nav.skills": "Skills",
     "nav.contact": "Contact",
+    "hero.greeting": "Hey there! I'm -",
+    "hero.highlight": "Second-year computer science student.",
+    "hero.bio":
+        "Passionate about building applications, from the interface to the database.",
+    "hero.stageCta": "Looking for an internship - Contact me",
+    "sections.projects": "Projects",
+    "sections.profile": "About me",
+    "sections.skills": "Skills",
+    "sections.contact": "Get in touch",
+    "profile.intro":
+        "Second-year computer science student at IUT de Metz, specialising in application development. I enjoy building clear, reliable logic with polished interfaces.",
+    "profile.stageLink": "Looking for an internship, let's talk",
+    "profile.education": "Education",
+    "profile.educationValue": "Computer Science degree - IUT de Metz",
+    "profile.location": "Location",
+    "profile.locationValue": "Grand Est, France",
+    "profile.environment": "Environment",
+    "profile.environmentValue": "Linux Fedora - VS Code",
+    "profile.status": "Status",
+    "profile.statusValue": "Looking for an internship",
+    "profile.technical": "Technical skills",
+    "profile.reliable": "Reliable junior profile",
+    "contact.networks": "My networks",
+    Email: "Email",
+    PhP: "PHP",
+    "HTML & CSS": "HTML & CSS",
+    JavaScript: "JavaScript",
+    TypeScript: "TypeScript",
+    "MCD / MLD": "Conceptual / logical data model",
+    Looping: "Looping",
+    phpMyAdmin: "phpMyAdmin",
+    Excel: "Excel",
+    CSV: "CSV",
+    "Git & GitHub": "Git & GitHub",
+    Linux: "Linux",
+    Overleaf: "Overleaf",
+    "C++": "C++",
+    Arduino: "Arduino",
+    PlatformIO: "PlatformIO",
+    HTML5: "HTML5",
+    CSS3: "CSS3",
+    "L'utilisateur peut saisir le nom de n'importe quelle ville ou village dans le monde. L'application interroge alors instantanément une API météorologique externe pour récupérer les données actuelles (température, conditions, humidité) et met à jour l'interface dynamiquement sans aucun rechargement de page.":
+        "Users can enter any city or village worldwide. The application queries an external weather API for current data and updates the interface instantly without reloading the page.",
+    "C'est un projet très complet qui m'a poussé à sortir de ma zone de confort. J'ai dû gérer toute la chaîne de transmission de l'information : de la conception du schéma électrique à la programmation du microcontrôleur, jusqu'à l'écriture du script chargé de faire le pont avec le système d'exploitation de mon PC.":
+        "This complete project pushed me outside my comfort zone. I managed the full data chain, from the circuit design and microcontroller to the script connecting the device with my computer's operating system.",
+    "Avant de manipuler les composants physiques, j'ai modélisé et testé les schémas électroniques sur Tinkercad. Cette étape m'a permis de valider les branchements (broches analogiques pour les potentiomètres, résistances de tirage pour les boutons) et de sécuriser le montage final.":
+        "Before working with physical components, I modelled and tested the circuits in Tinkercad. This validated the wiring and secured the final build.",
+    "La plus grande difficulté (et le meilleur apprentissage) de ce projet a été le diagnostic des erreurs. Contrairement au développement web classique, un bug pouvait aussi bien provenir d'une erreur de logique dans le code C++ ou Python, que d'un faux contact dans le câblage ou d'un composant défectueux.":
+        "The biggest challenge and best lesson was diagnosing errors. A bug could come from C++ or Python logic, a loose connection or a faulty component.",
+    "Ce projet ayant été pensé comme un exercice purement Front-End, la clé d'API est actuellement appelée côté client. J'ai conscience que pour une mise en production réelle, la bonne pratique exigerait la création d'un micro-backend (Node.js ou PHP) afin de stocker cette clé de manière sécurisée dans un fichier .env et de masquer les requêtes au navigateur.":
+        "As a front-end exercise, the API key is currently called from the client. In production, a Node.js or PHP backend should store it securely in an .env file and hide requests from the browser.",
+    "Développement de l'interface entièrement en HTML, CSS et TypeScript sans framework. Ce parti pris technique permet une maîtrise totale de la manipulation du DOM et garantit un code robuste et maintenable grâce au typage fort.":
+        "The interface was built entirely with HTML, CSS and TypeScript without a framework. This gives full control over the DOM while strict typing keeps the code robust and maintainable.",
+    "Conception du back-end avec une base de données relationnelle SQL pour gérer l'état des salles et les créneaux. La communication avec le client s'effectue via une API métier développée sur-mesure en PHP.":
+        "The backend uses a relational SQL database to manage rooms and time slots. The client communicates through a custom PHP business API.",
+    "Avant d'écrire la moindre ligne de code, l'architecture visuelle et le parcours utilisateur ont été pensés, schématisés et prototypés sur Whimsical pour garantir une interface ergonomique et un développement fluide.":
+        "Before writing code, the visual architecture and user journey were designed and prototyped in Whimsical to ensure an ergonomic interface and smooth development.",
     Projets: "Projects",
     Profil: "Profile",
     Compétences: "Skills",
@@ -120,7 +177,7 @@ const translations = {
 
 const sourceContent = new WeakMap();
 const translatableElements = document.querySelectorAll(
-    "h1, h2, h3, p, a, label, button, input, textarea, [data-i18n]",
+    "h1, h2, h3, p, a, label, button, input, textarea, span, code, .projet-date, .card-header p, .competences-subtitle, .contact-subtitle, [data-i18n]",
 );
 
 translatableElements.forEach((element) => {
@@ -145,7 +202,9 @@ function translatePage(language) {
         }
         if (language === "en" && translations[source.text])
             element.textContent = translations[source.text];
-        if (language === "fr") element.innerHTML = source.html;
+        if (language === "fr" && !element.querySelector("[data-i18n]")) {
+            element.innerHTML = source.html;
+        }
     });
     localStorage.setItem("portfolio-language", language);
     const button = document.querySelector("[data-language-toggle]");
@@ -157,7 +216,7 @@ function addControls() {
     controls.className = "site-controls";
     controls.innerHTML =
         '<button type="button" class="control-button" data-theme-toggle aria-label="Changer de thème">☼</button><button type="button" class="control-button language-button" data-language-toggle aria-label="Changer de langue">EN</button>';
-    (document.querySelector(".navbar") || document.body).append(controls);
+    document.body.append(controls);
     controls
         .querySelector("[data-theme-toggle]")
         .addEventListener("click", () => {
@@ -176,14 +235,16 @@ function initRevealAnimations() {
     elements.forEach((element, index) =>
         element.style.setProperty(
             "--reveal-delay",
-            `${Math.min(index * 55, 500)}ms`,
+            `${Math.min(index * 25, 220)}ms`,
         ),
     );
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting)
-                    entry.target.classList.add("est-visible");
+                entry.target.classList.toggle(
+                    "est-visible",
+                    entry.isIntersecting,
+                );
             });
         },
         { threshold: 0.12 },
@@ -196,3 +257,28 @@ if (localStorage.getItem("portfolio-theme") === "light")
 addControls();
 translatePage(localStorage.getItem("portfolio-language") || "fr");
 initRevealAnimations();
+
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+
+    try {
+        const response = await fetch(event.target.action, {
+            method: "POST",
+            body: data,
+            headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+            alert("Message envoyé avec succès !");
+            form.reset();
+        } else {
+            alert("Oops! Un problème est survenu.");
+        }
+    } catch (error) {
+        alert("Erreur réseau. Vérifiez votre connexion.");
+        console.log(error);
+    }
+});

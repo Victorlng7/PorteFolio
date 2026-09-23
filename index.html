@@ -8,7 +8,6 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
-        <script src="https://cdn.tailwindcss.com"></script>
         <script type="module" src="script.js"></script>
     </head>
 
@@ -20,10 +19,22 @@
                 ><a href="#1"><img src="img/logo V.png" alt="logoV" /></a
             ></div>
             <nav>
-                <a href="#2"><span class="nav-num">0.</span> Projets</a>
-                <a href="#3"><span class="nav-num">1.</span> Profile</a>
-                <a href="#4"><span class="nav-num">2.</span> Compétences</a>
-                <a href="#5"><span class="nav-num">3.</span> Contact</a>
+                <a href="#2"
+                    ><span class="nav-num">0.</span>
+                    <span data-i18n="nav.projects">Projets</span></a
+                >
+                <a href="#3"
+                    ><span class="nav-num">1.</span>
+                    <span data-i18n="nav.profile">Profil</span></a
+                >
+                <a href="#4"
+                    ><span class="nav-num">2.</span>
+                    <span data-i18n="nav.skills">Compétences</span></a
+                >
+                <a href="#5"
+                    ><span class="nav-num">3.</span>
+                    <span data-i18n="nav.contact">Contact</span></a
+                >
             </nav>
         </header>
 
@@ -107,7 +118,6 @@
                 </div>
             </div>
 
-            <!-- Colonne Droite : Photo avec effet Glow -->
             <div class="hero-visual">
                 <div class="glow-circle"></div>
                 <img
@@ -122,7 +132,6 @@
         <section id="projets" class="main-projet">
             <h2 class="section-title">Mes projets</h2>
             <div class="projets-grid">
-                <!-- Carte Projet 1 -->
                 <article class="projet-card element-cache">
                     <h3>Outil de gestion de salle</h3>
                     <p class="projet-date">Projet académique - 2026</p>
@@ -187,7 +196,6 @@
         <section id="profil" class="main-profil element-cache">
             <h2 class="section-title">Mon Profil</h2>
 
-            <!-- Introduction courte -->
             <div class="profil-intro">
                 <p>
                     Étudiant en 2e année de BUT Informatique à l'IUT de Metz.
@@ -198,7 +206,6 @@
                 </p>
             </div>
 
-            <!-- Grille des informations rapides -->
             <div class="profil-stats-grid">
                 <div class="stat-card element-cache">
                     <span class="stat-label">Formation</span>
@@ -220,7 +227,6 @@
                 </div>
             </div>
 
-            <!-- Compétences et Intérêts -->
             <div class="profil-details-grid">
                 <article class="detail-card element-cache">
                     <h3>Compétences Techniques</h3>
@@ -258,7 +264,6 @@
             </div>
 
             <div class="competences-grid">
-                <!-- Boîte 1 : Développement Web (Mise en avant) -->
                 <article
                     class="comp-card card-web highlight-card element-cache"
                 >
@@ -275,7 +280,6 @@
                     </div>
                 </article>
 
-                <!-- Boîte 2 : Données -->
                 <article class="comp-card card-data element-cache">
                     <div class="card-header">
                         <h3>Données</h3>
@@ -291,7 +295,6 @@
                     </div>
                 </article>
 
-                <!-- Boîte 3 : Langages -->
                 <article class="comp-card card-lang element-cache">
                     <div class="card-header">
                         <h3>Langages</h3>
@@ -304,7 +307,6 @@
                     </div>
                 </article>
 
-                <!-- Boîte 4 : Outils -->
                 <article class="comp-card card-tools element-cache">
                     <div class="card-header">
                         <h3>Outils</h3>
@@ -318,7 +320,6 @@
                     </div>
                 </article>
 
-                <!-- Boîte 5 : Méthodes -->
                 <article class="comp-card card-methods element-cache">
                     <div class="card-header">
                         <h3>Méthodes</h3>
@@ -350,7 +351,6 @@
             </div>
 
             <div class="contact-grid element-cache">
-                <!-- Colonne Gauche : Informations directes -->
                 <div class="contact-info">
                     <article class="info-card">
                         <h3>Email</h3>
@@ -365,8 +365,6 @@
                     </article>
                 </div>
 
-                <!-- Le formulaire viendra se placer juste en dessous dans ton HTML -->
-                <!-- Colonne Droite : Formulaire -->
                 <form
                     class="contact-form element-cache"
                     action="#"
@@ -410,7 +408,6 @@
                     >
                 </form>
             </div>
-            <!-- Fin de la contact-grid -->
         </section>
     </body>
 </html>

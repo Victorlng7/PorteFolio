@@ -699,9 +699,14 @@ textarea {
 }
 
 .network-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.links2 {
+    grid-row-start: 2;
 }
 
 .network-links a {
@@ -710,7 +715,7 @@ textarea {
     gap: 0.45rem;
     border: 1px solid var(--line);
     border-radius: 0.55rem;
-    padding: 0.55rem 0.7rem;
+    padding: 0.85rem 2.2rem;
     color: var(--muted);
     background: rgba(97, 232, 208, 0.05);
     font-size: 0.82rem;

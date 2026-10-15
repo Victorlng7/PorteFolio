@@ -6,16 +6,20 @@
 <header class="project-hero element-cache">
     <a href="../index.html#2" class="back-link">&larr; Retour au portfolio</a>
 
-    <h1 class="project-title gradient-text">Application Météo Vue.js</h1>
+    <h1 class="project-title gradient-text">StopVaping</h1>
     <p class="project-subtitle"
-        >Projet personnel de consommation d'API en temps réel</p
+        >Dashboard de suivi et de visualisation de la consommation de
+        nicotine</p
+    >
+    <a href="https://github.com/Victorlng7/StopVape" class="back-link"
+        >Voir le Repository GitHub</a
     >
 
     <div class="projet-tags justify-center">
         <span class="tag">Vue.js</span>
-        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
         <span class="tag">API REST</span>
-        <span class="tag">Front-end</span>
+        <span class="tag">FullStack</span>
     </div>
 </header>
 
@@ -24,21 +28,21 @@
         <div class="intro-text element-cache">
             <h2>Le Contexte</h2>
             <p>
-                Ce projet personnel est né d'une volonté d'approfondir mes
-                compétences sur le framework Vue.js et d'explorer la gestion de
-                données asynchrones.
+                Ce projet personnel est né de la volonté d'approfondir ma
+                maîtrise du framework Vue.js à travers le développement d'une
+                application complète et concrète.
             </p>
-            <p>
-                L'utilisateur peut saisir le nom de n'importe quelle ville ou
-                village dans le monde. L'application interroge alors
-                instantanément une API météorologique externe pour récupérer les
-                données actuelles (température, conditions, humidité) et met à
-                jour l'interface dynamiquement sans aucun rechargement de page.
-            </p>
+            <p
+                >L'outil permet aux utilisateurs de saisir quotidiennement leurs
+                données de consommation afin d'en assurer un suivi précis. Grâce
+                à un système de statistiques détaillées et d'analyse des
+                tendances, l'application accompagne activement les utilisateurs
+                dans leur démarche de réduction ou du vapotage / tabac.</p
+            >
         </div>
         <div class="intro-visual element-cache">
             <div class="image-placeholder">
-                <span>Capture d'écran de l'interface météo</span>
+                <span>Capture d'écran de l'interface</span>
             </div>
         </div>
     </section>
@@ -52,35 +56,40 @@
                 <h3>Réactivité avec Vue.js</h3>
                 <p
                     >Utilisation du système de réactivité de Vue.js (comme
-                    <code>v-model</code> pour la barre de recherche) pour lier
-                    instantanément les saisies de l'utilisateur aux variables
-                    d'état du composant, offrant une interface extrêmement
-                    fluide.</p
+                    <code>v-model</code> pour les nombreuses zones de saisie)
+                    pour lier instantanément les saisies de l'utilisateur aux
+                    variables d'état du composant, offrant une interface
+                    extrêmement fluide.</p
                 >
             </article>
 
             <article class="feature-card element-cache">
                 <div class="feature-icon">🌐</div>
-                <h3>Consommation d'API REST</h3>
-                <p
-                    >Gestion des requêtes HTTP asynchrones via fetch vers une
-                    API externe. Traitement des réponses au format JSON, gestion
-                    des promesses et interception des erreurs (par exemple, si
-                    la ville saisie n'existe pas).</p
-                >
+                <h3>API PHP Maison</h3>
+                <p>
+                    Afin de structurer et d'alimenter l'interface utilisateur en
+                    temps réel, j'ai conçu et développé une API PHP
+                    personnalisée. Cette architecture back-end gère l'ensemble
+                    des points de terminaison (<code>endpoints</code>)
+                    nécessaires au traitement des saisies quotidiennes et au
+                    calcul des statistiques de consommation. Ce développement
+                    m'a permis de mettre en place un pont performant et sécurisé
+                    entre le front-end sous Vue.js et la base de données.
+                </p>
             </article>
 
             <article class="feature-card element-cache">
                 <div class="feature-icon">🔐</div>
-                <h3>Architecture & Sécurité (Axes d'amélioration)</h3>
+                <h3>Une V1 encourageante !</h3>
                 <p
-                    >Ce projet ayant été pensé comme un exercice purement
-                    Front-End, la clé d'API est actuellement appelée côté
-                    client. J'ai conscience que pour une mise en production
-                    réelle, la bonne pratique exigerait la création d'un
-                    micro-backend (Node.js ou PHP) afin de stocker cette clé de
-                    manière sécurisée dans un fichier <code>.env</code> et de
-                    masquer les requêtes au navigateur.</p
+                    >Cette première version pose des bases solides, tant sur le
+                    plan fonctionnel que technique. Développée sur mon temps
+                    librecomme un projet d'apprentissage et d'exploration, cette
+                    V1 intègre d'ores et déjà des standards de sécurité
+                    essentiels : vérification des adresses e-mail avant la
+                    création de compte, hachage sécurisé des mots de passe, et
+                    stricte étanchéité avec l'absence de données ou de variables
+                    sensibles exposées dans le front-end.</p
                 >
             </article>
         </div>

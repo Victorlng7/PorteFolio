@@ -44,6 +44,42 @@ const translations = {
     PlatformIO: "PlatformIO",
     HTML5: "HTML5",
     CSS3: "CSS3",
+    "Memoryx en C": "Memoryx in C",
+    "Application interactive développée en C":
+        "Interactive application developed in C",
+    "Réalisé dans le cadre de ma formation en BUT Informatique, ce projet avait pour objectif la conception d'un programme en C pour structurer des données complexes (tableaux dynamiques, matrices 2D) et d'implémenter une logique algorithmique poussée":
+        "Developed as part of my computer science degree, this project involved building a C program to structure complex data (dynamic arrays and 2D matrices) and implement advanced algorithms.",
+    "Logique Algorithmique & Langage C":
+        "Algorithms & the C programming language",
+    "Développement complet du jeu en C, garantissant une gestion rigoureuse de la mémoire et des structures de données. Maîtrise des matrices 2D avec une indexation précise des coordonnées (lignes/colonnes) pour optimiser l'allocation et le rendu du plateau de jeu.":
+        "The game was built entirely in C, with careful memory and data-structure management. 2D matrices use precise row and column indexing to optimise memory allocation and render the game board.",
+    "Intelligence Artificielle & Modes de Jeu":
+        "Artificial intelligence & game modes",
+    "Conception de bots dotés de différents niveaux de difficulté, intégrants des structures de mémoire pour simuler un comportement stratégique. Implémentation de mécaniques de jeu avancées telles que des permutations de jokers et des modes de triche dynamiques.":
+        "Bots with different difficulty levels use memory structures to simulate strategic behaviour. Advanced game mechanics include joker swaps and dynamic cheat modes.",
+    "Architecture & Modélisation": "Architecture & modelling",
+    "Avant l'écriture du code, structuration rigoureuse de l'architecture logicielle et modélisation des flux de données. Ce travail de conception en amont a permis d'assurer la modularité du code et la fluidité des interactions entre les différentes composantes du programme.":
+        "Before coding began, the software architecture was carefully structured and data flows were modelled. This upfront design kept the code modular and ensured smooth interactions between the program's components.",
+    "Dashboard de suivi et de visualisation de la consommation de nicotine":
+        "Nicotine consumption tracking and visualisation dashboard",
+    "Voir le Repository GitHub": "View GitHub repository",
+    "Ce projet personnel est né de la volonté d'approfondir ma maîtrise du framework Vue.js à travers le développement d'une application complète et concrète.":
+        "This personal project grew from a desire to deepen my knowledge of Vue.js by building a complete, practical application.",
+    "L'outil permet aux utilisateurs de saisir quotidiennement leurs données de consommation afin d'en assurer un suivi précis. Grâce à un système de statistiques détaillées et d'analyse des tendances, l'application accompagne activement les utilisateurs dans leur démarche de réduction ou du vapotage / tabac.":
+        "The tool lets users enter their daily consumption data and track it accurately. Detailed statistics and trend analysis support users as they work to reduce or quit vaping or smoking.",
+    "Utilisation du système de réactivité de Vue.js (comme v-model pour les nombreuses zones de saisie) pour lier instantanément les saisies de l'utilisateur aux variables d'état du composant, offrant une interface extrêmement fluide.":
+        "Vue.js reactivity, including v-model for the many input fields, instantly links user input to component state for a highly responsive interface.",
+    "API PHP Maison": "Custom PHP API",
+    "Afin de structurer et d'alimenter l'interface utilisateur en temps réel, j'ai conçu et développé une API PHP personnalisée. Cette architecture back-end gère l'ensemble des points de terminaison (endpoints) nécessaires au traitement des saisies quotidiennes et au calcul des statistiques de consommation. Ce développement m'a permis de mettre en place un pont performant et sécurisé entre le front-end sous Vue.js et la base de données.":
+        "To structure and update the user interface in real time, I designed and built a custom PHP API. This backend handles all the endpoints needed to process daily entries and calculate consumption statistics, providing an efficient and secure link between the Vue.js frontend and the database.",
+    "Une V1 encourageante !": "A promising first version!",
+    "Cette première version pose des bases solides, tant sur le plan fonctionnel que technique. Développée sur mon temps librecomme un projet d'apprentissage et d'exploration, cette V1 intègre d'ores et déjà des standards de sécurité essentiels : vérification des adresses e-mail avant la création de compte, hachage sécurisé des mots de passe, et stricte étanchéité avec l'absence de données ou de variables sensibles exposées dans le front-end.":
+        "This first version establishes a solid functional and technical foundation. Built in my spare time as a learning project, it already includes essential security practices: email address verification before account creation, secure password hashing, and protection against exposing sensitive data or variables in the frontend.",
+    "Projet académique - 2025": "Academic project - 2025",
+    "Creation d'un jeu memoryx dans le cadre de ma formation":
+        "A Memoryx game created as part of my studies",
+    "Outil numérique interactif pour le suivi personnalisé des habitudes de consommation.":
+        "An interactive digital tool for tracking personal consumption habits.",
     "L'utilisateur peut saisir le nom de n'importe quelle ville ou village dans le monde. L'application interroge alors instantanément une API météorologique externe pour récupérer les données actuelles (température, conditions, humidité) et met à jour l'interface dynamiquement sans aucun rechargement de page.":
         "Users can enter any city or village worldwide. The application queries an external weather API for current data and updates the interface instantly without reloading the page.",
     "C'est un projet très complet qui m'a poussé à sortir de ma zone de confort. J'ai dû gérer toute la chaîne de transmission de l'information : de la conception du schéma électrique à la programmation du microcontrôleur, jusqu'à l'écriture du script chargé de faire le pont avec le système d'exploitation de mon PC.":
